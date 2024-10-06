@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body-bg-color: #EEEEEE;
+    --container-bg-color: #FFFFFF;
+    --input-bg-color: #F8F9FA;
+    --input-out-color: #DDDDDD;
+    --add-btn-color: #28A645;
+    --cancel-btn-color: #007BFF;
+    --delete-btn-color: #DB3545;
+    --edit-btn-color: #FFC104;
+    --table-head-color: #EEEEEE;
+    --table-child-color: #FFF;
+    --table-second-child-color: #F2F2F2;
+}
+
+body{
+    background-color: var(--body-bg-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.container{
+    width: clamp(800px,50%,1000px);
+    height: 80%;
+    background: var(--container-bg-color);
+    border-radius: 20px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .input-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 40px;
+}
+
+.container .input-content input{
+    height: 100%;
+    width: calc(100% - 80px);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #F8F9FA;
+    border: 1px solid var(--input-out-color);
+    font-size: 20px;
+    padding: 15px;
+}
+
+.container .input-content input:focus{
+    outline: 2px solid var(--cancel-btn-color);
+    box-shadow: 0 0 10px var(--cancel-btn-color);
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button{
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:active{
+    opacity: 0.7;
+    transition: 0.3s all;
+}
+
+.add-btn{
+    background-color: var(--add-btn-color);
+}
+
+.delete-btn{
+    background-color: var(--delete-btn-color);
+}
+
+.cancel-btn{
+    background-color: var(--cancel-btn-color);
+}
+
+.edit-btn{
+    background-color: var(--edit-btn-color);
+    color: #000;
+}
+
+.task-content{
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.task-content table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-content th,
+.task-content td{
+    border: 2px solid #ddd;
+    padding: 6px 15px;
+    text-align: center;
+}
+
+.task-content th{
+    padding: 10px;
+    background-color: var(--table-head-color);
+}
+
+.task-content .btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='checkbox']{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.task-content tbody tr td:nth-child(1){
+    width: 50px;
+}
+
+.task-content tbody tr td:nth-child(2){
+    width: 100px;
+}
+
+.task-content tbody tr td:nth-child(3){
+    width: 200px;
+}
+
+.task-content tbody tr td:nth-child(4){
+    width: 120px;
+}
+
+.task-content tbody tr td:nth-child(5){
+    width: 100px;
+}
+
+.task-content .complete{
+    text-decoration: line-through;
+    color: #6c757d;
+}
